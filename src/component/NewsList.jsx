@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
-import { Container, Row, Col, Card, ListGroup } from "react-bootstrap";
+import { useParams } from "react-router-dom";
+import { Container, Row, Col, Card } from "react-bootstrap";
 
-function NewsList({ category }) {
+function NewsList() {
+  const { category } = useParams(); // Ambil kategori dari URL
   const [news, setNews] = useState([]);
   const apiUrl = `https://api-berita-indonesia.vercel.app/antara/${category}`;
 
@@ -15,7 +17,7 @@ function NewsList({ category }) {
   return (
     <Container>
       <h3 className="mt-3 ms-1 mb-4">
-      <i class='bx bx-category'></i> {category.toUpperCase()}
+        <i className="bx bx-category"></i> {category.toUpperCase()}
       </h3>
       <Row>
         {news.map((article, index) => (
@@ -25,7 +27,12 @@ function NewsList({ category }) {
               <Card.Body>
                 <Card.Title>{article.title}</Card.Title>
                 <Card.Text>{article.description}</Card.Text>
-                <a href={article.link} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
+                <a
+                  href={article.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-primary"
+                >
                   Baca Selengkapnya
                 </a>
               </Card.Body>
