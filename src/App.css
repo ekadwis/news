@@ -2,3 +2,12 @@
     text-decoration: none;
     color: white;
 }
+
+.footer a {
+    color: black;
+    font-size: 20pt;
+}
+
+.footer a:hover {
+    color: rgb(62, 125, 219);
+}

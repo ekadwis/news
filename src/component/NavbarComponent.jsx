@@ -26,6 +26,9 @@ function NavbarComponent() {
             <Nav.Link as={Link} to="/">Home</Nav.Link>
             <Nav.Link as={Link} to="/politik">Politik</Nav.Link>
             <Nav.Link as={Link} to="/hukum">Hukum</Nav.Link>
+            <Nav.Link as={Link} to="/ekonomi">Ekonomi</Nav.Link>
+            <Nav.Link as={Link} to="/bola">Bola</Nav.Link>
+            <Nav.Link as={Link} to="/olahraga">Olahraga</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
